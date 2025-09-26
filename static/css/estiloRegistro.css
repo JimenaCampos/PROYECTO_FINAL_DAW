@@ -1,0 +1,97 @@
+/* Estilos generales */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor principal */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tarjeta del formulario */
+section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 400px;
+  text-align: center;
+}
+
+/* Título */
+section h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+/* Grupos de formulario */
+form div {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #7c3aed; /* violeta estilo Kahoot */
+  outline: none;
+}
+
+/* Checkboxes */
+form input[type="checkbox"] {
+  width: auto;
+  margin-right: 6px;
+}
+
+form div:nth-last-child(3),
+form div:nth-last-child(2) {
+  font-size: 14px;
+  color: #444;
+}
+
+/* Botón principal */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #7c3aed;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.2s;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background: #5b21b6;
+}

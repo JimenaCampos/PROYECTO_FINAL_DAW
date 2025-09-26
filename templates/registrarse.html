@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/estiloRegistro.css') }}">
+
+</head>
+<body>
+  <form action="{{ url_for('registrar') }}" method="POST">
+    <div>
+      <label>Nombres</label>
+      <input type="text" name="nombres" required>
+    </div>
+
+    <div>
+      <label>Apellido Paterno</label>
+      <input type="text" name="ape_pat" required>
+    </div>
+
+    <div>
+      <label>Apellido Materno</label>
+      <input type="text" name="ape_mat" required>
+    </div>
+
+    <div>
+      <label>Correo Institucional</label>
+      <input type="email" name="correo" required>
+    </div>
+
+    <div>
+      <label>Fecha de Nacimiento</label>
+      <input type="date" name="fecha_nac" required>
+    </div>
+
+    <div>
+      <label>DNI</label>
+      <input type="text" name="dni" maxlength="8" required>
+    </div>
+
+    <div>
+      <label>Sexo</label>
+      <select name="sexo" required>
+        <option value="M">Masculino</option>
+        <option value="F">Femenino</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Contraseña</label>
+      <input type="password" name="contrasena" required>
+    </div>
+
+    <div>
+      <label>Confirmar Contraseña</label>
+      <input type="password" name="contrasena_conf" required>
+    </div>
+
+    <div>
+      <input type="checkbox" name="terminos" value="1" required> Acepto los términos
+    </div>
+
+    <div>
+      <input type="checkbox" name="privacidad" value="1" required> Acepto la política de privacidad
+    </div>
+
+    <button type="submit">Registrarse</button>
+  </form>
+</body>
+</html>

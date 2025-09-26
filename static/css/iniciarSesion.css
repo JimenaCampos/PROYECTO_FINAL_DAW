@@ -1,0 +1,127 @@
+/* Estilos generales */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Tarjeta */
+main section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 350px;
+  text-align: center;
+}
+
+/* Título */
+h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+/* Formularios */
+form div {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #7c3aed; /* violeta estilo Kahoot */
+  outline: none;
+}
+
+/* Enlace de restablecer */
+form p {
+  font-size: 13px;
+  margin: 0;
+}
+
+form a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+form a:hover {
+  text-decoration: underline;
+}
+
+/* Botón principal */
+form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #7c3aed;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+form button:hover {
+  background: #5b21b6;
+}
+
+/* Separador */
+section > div span {
+  display: inline-block;
+  margin: 15px 0;
+  font-size: 20px;
+  color: #999;
+}
+
+/* Botones sociales */
+section > div button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+section > div button:hover {
+  background: #f4f4f9;
+}
+
+/* Registro */
+section > div p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #444;
+}
+
+section > div p a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+section > div p a:hover {
+  text-decoration: underline;
+}
