@@ -77,11 +77,12 @@ def registrar():
     try:
         with conexion.cursor() as cursor:
             cursor.execute(
-                """INSERT INTO registrarse 
-                (nombres, ape_pat, ape_mat, correo, fecha_nac, password, dni, sexo)
-                VALUES (%s,%s,%s,%s,%s,%s,%s,%s)""",
-                (nombres, ape_pat, ape_mat, correo, fecha_nac, password, dni, 1 if sexo == "M" else 0)
-            )
+            """INSERT INTO usuario 
+            (nombres, ape_pat, ape_mat, correo, fecha_nac, password, dni, sexo)
+            VALUES (%s,%s,%s,%s,%s,%s,%s,%s)""",
+            (nombres, ape_pat, ape_mat, correo, fecha_nac, password, dni, 1 if sexo == "M" else 0)
+        )
+
         conexion.commit()
         flash("Usuario registrado con éxito", "success")
         return redirect(url_for("iniciar_sesion"))
@@ -115,7 +116,8 @@ def procesar_login():
 
     try:
         with conexion.cursor() as cursor:
-            cursor.execute("SELECT * FROM registrarse WHERE correo=%s AND password=%s", (usuario, contrasena))
+            cursor.execute("SELECT * FROM usuario WHERE correo=%s AND password=%s", (usuario, contrasena))
+
             user = cursor.fetchone()
 
         if user:

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar usuario</title>
+</head>
+<body>
+    <h1>Editar usuario</h1>
+    <form action="{{ url_for('actualizar_usuario') }}" method="POST">
+        <input type="hidden" name="id" value="{{ usuario.id }}">
+        <label>Nombres:</label><input type="text" name="nombres" value="{{ usuario.nombres }}"><br>
+        <label>Apellido Paterno:</label><input type="text" name="ape_pat" value="{{ usuario.ape_pat }}"><br>
+        <label>Apellido Materno:</label><input type="text" name="ape_mat" value="{{ usuario.ape_mat }}"><br>
+        <label>Correo:</label><input type="email" name="correo" value="{{ usuario.correo }}"><br>
+        <label>DNI:</label><input type="text" name="dni" value="{{ usuario.dni }}"><br>
+        <label>Rol:</label>
+        <select name="rol">
+            <option value="estudiante" {% if usuario.rol == 'estudiante' %}selected{% endif %}>Estudiante</option>
+            <option value="profesor" {% if usuario.rol == 'profesor' %}selected{% endif %}>Profesor</option>
+        </select><br>
+        <label>Activo:</label><input type="checkbox" name="estado" {% if usuario.estado %}checked{% endif %}><br>
+        <button type="submit">Actualizar</button>
+    </form>
+</body>
+</html>
