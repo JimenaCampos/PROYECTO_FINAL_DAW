@@ -1,0 +1,329 @@
+/* === Estilos generales === */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* === Sidebar === */
+.sidebar {
+  width: 220px;
+  background-color: #2d2d2d;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar .btn {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s;
+}
+
+.sidebar .add {
+  background-color: #3b82f6; /* Azul */
+}
+.sidebar .add:hover {
+  background-color: #2563eb;
+}
+
+.sidebar .cancel {
+  background-color: #ef4444; /* Rojo */
+}
+.sidebar .cancel:hover {
+  background-color: #b91c1c;
+}
+
+/* === Contenido principal === */
+.content {
+  flex: 1;
+  padding: 30px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.pregunta-container {
+  width: 100%;
+  max-width: 800px;
+  background: #fafafa;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.input-pregunta {
+  width: 100%;
+  font-size: 20px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+/* === Área multimedia === */
+.multimedia {
+  border: 2px dashed #bbb;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 25px;
+  background: #fdfdfd;
+}
+.multimedia p {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* === Opciones === */
+.opciones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.opcion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.opcion input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Colores estilo Kahoot */
+.rojo {
+  background-color: #ef4444;
+}
+.azul {
+  background-color: #3b82f6;
+}
+.amarillo {
+  background-color: #f59e0b;
+}
+.verde {
+  background-color: #22c55e;
+}
+
+/* === Botón añadir más respuestas === */
+.add-more {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: #6b7280;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.add-more:hover {
+  background-color: #4b5563;
+}
+
+/* === Footer === */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #2d2d2d;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Contenedor de diapositivas */
+.slides {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #555;
+  font-size: 14px;
+  color: #fff;
+}
+
+.slide-item {
+  background: #222;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.slide-item:hover {
+  background: #333;
+  transform: scale(1.02);
+}
+
+.slide-num {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.slide-title {
+  font-size: 13px;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Opciones miniatura */
+.slide-opciones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.mini-opcion {
+  padding: 4px;
+  border-radius: 6px;
+  font-size: 11px;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Vista previa en el editor */
+.preview {
+  display: none;
+  width: 100%;
+  height: 180px;
+  margin-top: 12px;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Miniatura en la diapositiva */
+.slide-thumb {
+  width: 100%;
+  height: 60px;
+  border-radius: 6px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 6px;
+}
+
+/* Botón estilizado para subir/ reemplazar imagen */
+.btn-file {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: filter .2s, transform .02s;
+  margin-top: 8px;
+}
+.btn-file:hover { filter: brightness(0.95); }
+.btn-file:active { transform: translateY(1px); }
+
+/* Vista previa en el editor */
+.preview {
+  display: none;
+  width: 100%;
+  height: 180px;
+  margin-top: 12px;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid #e5e7eb;
+}
+
+/* Cuando la pregunta ya fue guardada con imagen, el botón se muestra debajo */
+.multimedia.saved-with-image .btn-file {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* === Botones unificados === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  font: 600 14px/1.1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transition: transform .02s ease, filter .15s ease, box-shadow .15s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  text-decoration: none; /* aplica también a <label> */
+}
+
+.btn:hover { filter: brightness(0.97); }
+.btn:active { transform: translateY(1px); }
+.btn:focus-visible { outline: 2px solid rgba(99,102,241,.5); outline-offset: 2px; }
+
+/* Variantes */
+.btn--primary { background: #6366f1; }   /* morado tipo Kahoot */
+.btn--danger  { background: #ef4444; }   /* rojo consistente */
+
+/* Contenedor de acciones bajo la imagen */
+.media-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Estado: cuando ya hay imagen, escondemos el botón superior */
+.multimedia.has-image #fileLabel { display: none; }
+
+/* Vista previa (ya la tienes; la dejo por claridad) */
+.preview {
+  display: none;
+  width: 100%;
+  height: 180px;
+  margin-top: 12px;
+  border-radius: 12px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid #e5e7eb;
+}
+
+/* Miniatura en la diapositiva (si no lo tenías) */
+.slide-thumb {
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 6px;
+}
