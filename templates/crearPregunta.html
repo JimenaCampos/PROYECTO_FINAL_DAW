@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear Pregunta - Quizz</title>
+    <!-- Header y Footer CSS -->
+    <link rel="stylesheet" href="/static/css/header.css" />
+    <link rel="stylesheet" href="/static/css/footer.css" />
+    <!-- CSS específico de la vista -->
+    <link rel="stylesheet" href="/static/css/crearPreguntas.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">Quizz</div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar" />
+      </div>
+
+      <nav class="nav-links">
+        <a href="#" class="active">Historial</a>
+        <a href="#">Biblioteca</a>
+        <a href="#">Partida</a>
+      </nav>
+
+      <div class="user-menu">
+        <span>Bienvenido, Usuario</span>
+        <div class="user-icon"></div>
+      </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="app-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="btn add" id="btnAdd">➕ Añadir</button>
+        <button class="btn cancel">❌ Cancelar</button>
+
+        <!-- Contenedor de preguntas guardadas -->
+        <div class="slides" id="slidesContainer">
+          <h4>Preguntas guardadas</h4>
+          <!-- Aquí se van insertando las diapositivas con JS -->
+        </div>
+      </aside>
+
+      <!-- Cuerpo -->
+      <main class="content">
+        <div class="pregunta-container">
+          <!-- Pregunta -->
+          <input
+            type="text"
+            id="titulo"
+            class="input-pregunta"
+            placeholder="Escribe tu pregunta..."
+          />
+
+          <!-- Multimedia -->
+          <div class="multimedia" id="multimediaBox">
+            <p>📂 Inserta aquí elementos multimedia</p>
+
+            <!-- Botón “Seleccionar/Reemplazar imagen” con mismo estilo -->
+            <label for="archivo" class="btn btn--primary" id="fileLabel"
+              >Seleccionar imagen</label
+            >
+            <input type="file" id="archivo" accept="image/*" hidden />
+
+            <!-- Vista previa -->
+            <div
+              class="preview"
+              id="mediaPreview"
+              aria-label="Vista previa de imagen"
+            ></div>
+
+            <!-- Acciones de imagen (aparecen cuando hay preview) -->
+            <div class="media-actions" id="mediaActions" style="display: none">
+              <button type="button" id="btnRemoveImage" class="btn btn--danger">
+                Quitar imagen
+              </button>
+              <label for="archivo" class="btn btn--primary" id="fileLabelBottom"
+                >Reemplazar imagen</label
+              >
+            </div>
+          </div>
+
+          <!-- Opciones -->
+          <div class="opciones">
+            <div class="opcion rojo">
+              <input type="radio" name="correcta" value="1" />
+              <input type="text" placeholder="Añadir respuesta 1" required />
+            </div>
+            <div class="opcion azul">
+              <input type="radio" name="correcta" value="2" />
+              <input type="text" placeholder="Añadir respuesta 2" required />
+            </div>
+            <div class="opcion amarillo">
+              <input type="radio" name="correcta" value="3" />
+              <input type="text" placeholder="Añadir respuesta 3 (opcional)" />
+            </div>
+            <div class="opcion verde">
+              <input type="radio" name="correcta" value="4" />
+              <input type="text" placeholder="Añadir respuesta 4 (opcional)" />
+            </div>
+          </div>
+
+          <!-- Botón añadir más -->
+          <button class="btn add-more">➕ Añadir más respuesta</button>
+        </div>
+      </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-logo">
+        <h2>Quizz</h2>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Términos</h4>
+          <a href="#">Términos</a>
+          <a href="#">Condiciones</a>
+          <a href="#">Cookies</a>
+        </div>
+        <div>
+          <h4>Nosotros</h4>
+          <a href="#">Fundadores</a>
+          <a href="#">Visión</a>
+          <a href="#">Misión</a>
+        </div>
+        <div>
+          <h4>Redes sociales</h4>
+          <a href="#">Instagram</a>
+          <a href="#">Tiktok</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+      <div class="footer-extra">
+        <img src="/static/img/libroReclamaciones.png" alt="libro" />
+        <h3>Libro de Reclamaciones</h3>
+      </div>
+    </footer>
+    <script src="/static/js/validarPregunta.js"></script>
+  </body>
+</html>
