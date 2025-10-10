@@ -1,0 +1,95 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* responsivo */
+  background: #1d1d1d; /* negro/gris oscuro */
+  color: white;
+  padding: 50px 80px; /* más aire */
+}
+
+/* LOGO */
+.footer-logo h2 {
+  font-size: 38px; /* más grande */
+  color: #2aeaf7; /* celeste */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* LINKS */
+.footer-links {
+  display: flex;
+  gap: 100px; /* más espacio entre columnas */
+}
+
+.footer-links div h4 {
+  margin-bottom: 16px;
+  font-size: 22px; /* más grande */
+  color: #2aeaf7; /* celeste */
+}
+
+.footer-links div a {
+  display: block;
+  text-decoration: none;
+  color: #ccc; /* gris claro */
+  font-size: 20px; /* más grande */
+  margin: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.footer-links div a:hover {
+  color: #2aeaf7; /* celeste al hover */
+}
+
+/* EXTRA */
+.footer-extra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-extra img {
+  width: 75px;
+  height: auto;
+}
+
+.footer-extra h3 {
+  font-size: 20px; /* más grande */
+  font-weight: normal;
+  color: #ddd;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+    padding: 40px 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-extra {
+    justify-content: center;
+  }
+}
